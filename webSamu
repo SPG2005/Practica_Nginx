@@ -1,0 +1,10 @@
+server {
+    listen 80;
+    listen [::]:80;
+    root /var/www/webSamu/html/static-website-example;
+    index index.html index.htm;
+    server_name webSamu;
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
