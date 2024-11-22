@@ -1,0 +1,11 @@
+server {
+    listen 80;
+    listen [::]:80;
+    root /var/www/webPedrosa/html;
+    index index.html index.htm index.nginx-debian.html;
+    server_name webPedrosa;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
